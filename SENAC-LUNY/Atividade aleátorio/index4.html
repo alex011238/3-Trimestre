@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <body style="background-color: darkred;"
+    <meta charset="UTF-8">
+    <title>Calculadora de Troco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: darkgreen;
+            color: black;
+            border: darkred;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #resultado {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora mas em mcdonald</h1>
+    <button onclick="calcularTroco()">Calcular Troco em mcdonald</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularTroco() {
+            const produto = prompt("Bem vindo ao mcdonald?");
+            if (!produto) return;
+
+            const precoStr = prompt("O senhor oq vc quer pedir? (em reais, use ponto para centavos ex: 19.90)");
+            const preco = parseFloat(precoStr);
+            if (isNaN(preco) || preco <= 0) {
+                alert("Preço inválido!");
+                return;
+            }
+
+            const pagoStr = prompt("Quanto em dinheiro o cliente deu?");
+            const pago = parseFloat(pagoStr);
+            if (isNaN(pago) || pago < preco) {
+                alert("Valor pago inválido ou insuficiente!");
+                return;
+            }
+
+            const troco = pago - preco;
+
+            document.getElementById("resultado").innerHTML = 
+                `Você comprou <strong>${produto}</strong>, que custa <strong>R$${preco.toFixed(2)}</strong>.<br>
+                Deu <strong>R$${pago.toFixed(2)}</strong> em dinheiro e vai receber <strong>R$${troco.toFixed(2)}</strong> de troco!<br>
+                <strong>Volte sempre!</strong>`;
+        }
+    </script>
+
+</body>
+</html>

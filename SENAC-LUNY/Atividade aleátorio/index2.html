@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Boas-Vindas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 29px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 25px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body style="background-color:darkred ;"
+
+  <h1>Ola povos, bem-vindo à nossa página!</h1>
+  <button onclick="saudacao()">Clique aqui</button>
+
+  <script>
+    function saudacao() {
+      const nome = prompt("Qual é o seu nome?");
+      if (!nome) {
+        alert("Você precisa digitar um nome.");
+        return;
+      }
+
+      const idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+      if (!idade || isNaN(idade)) {
+        alert("Por favor, insira uma idade válida.");
+        return;
+      }
+
+      alert(`Que bacana! ${nome} tem ${idade} anos!`);
+    }
+  </script>
+
+</body>
+</html>

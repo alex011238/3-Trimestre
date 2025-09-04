@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade Antes e Depois</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color: darkred;"
+
+  <h1>Atividade Antes e Depois</h1>
+  <button onclick="mostrarAntecessorSucessor()">Clique aqui</button>
+
+  <script>
+    function mostrarAntecessorSucessor() {
+      const input = prompt("Digite um número inteiro:");
+
+      // Verifica se o input não está vazio e é um número válido
+      if (input !== null && input.trim() !== "") {
+        const numero = parseInt(input);
+
+        if (!isNaN(numero)) {
+          const antecessor = numero - 1;
+          const sucessor = numero + 1;
+          alert(`Número informado: ${numero}\nAntecessor: ${antecessor}\nSucessor: ${sucessor}`);
+        } else {
+          alert("Por favor, digite um número inteiro válido.");
+        }
+      } else {
+        alert("Entrada cancelada ou inválida.");
+      }
+    }
+  </script>
+
+</body>
+</html>
