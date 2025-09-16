@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #mensagem {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #6e0909;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bem-vindo!11!1!</h1>
+    <p id="mensagem"></p>
+
+    <script>
+        // Solicita o nome do usuário
+        let nomeUsuario = prompt("Digite seu nome:");
+
+        // Seleciona o elemento HTML onde a mensagem será exibida
+        let mensagemElemento = document.getElementById("mensagem");
+
+        // Exibe a saudação personalizada
+        if (nomeUsuario) {
+            mensagemElemento.textContent = `Olá, ${nomeUsuario}! É um prazer ter você aqui.`;
+        } else {
+            mensagemElemento.textContent = "Olá! É um prazer ter você aqui.";
+        }
+    </script>
+
+</body>
+</html>

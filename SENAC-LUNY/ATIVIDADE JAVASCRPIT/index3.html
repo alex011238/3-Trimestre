@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador de Idade</title>
+</head>
+<body>
+
+  <h1>Verificação de Idade</h1>
+  <p id="resultado"></p>
+
+  <script>
+    // Solicita a idade do usuário
+    let idade = prompt("Digite sua idade:");
+
+    // Converte o valor para número
+    idade = Number(idade);
+
+    // Verifica se a idade é maior ou igual a 18
+    if (idade >= 18) {
+      document.getElementById("resultado").textContent = "Você é maior de idade e complemamente adulto.";
+    } else {
+      document.getElementById("resultado").textContent = "Você é menor de idade e crinnça.";
+    }
+  </script>
+
+</body>
+</html>
